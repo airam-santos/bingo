@@ -1,17 +1,7 @@
 
-/*
-const createCard=function(){
-    const balls=createBalls();
-    const card=[];
-    for(let i=0;i<15;i++){
-        card.push(balls.slice(0));
-        _.pull(balls, balls.slice(0));
-    }
-    return card;
-}
-*/
-const createCard=(items=15)=>{
-    let balls= _.shuffle(_.range(1, 90));
+
+const createCard=()=>{
+    let balls= _.shuffle(_.range(1, 91));
     return balls.splice(0,15);
 }
 const showCard=function(element,card){
@@ -22,11 +12,12 @@ const showCard=function(element,card){
         element.appendChild(div);
     }
 }
+
 const newNumber=()=>{
     let balls= _.shuffle(_.range(1, 90));
     const panel = document.querySelector('.panel');
     const number=balls[0];
-    panel.textContent= 'number';
+    //panel.innerHTML= <div class="number number"number>number</div>;
 }
 
 
