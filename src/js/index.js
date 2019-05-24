@@ -17,7 +17,8 @@ const newNumber=()=>{
     let balls= _.shuffle(_.range(1, 90));
     const panel = document.querySelector('.panel');
     const number=balls[0];
-    //panel.innerHTML= <div class="number number"number>number</div>;
+    panel.innerHTML= '';
+    panel.innerHTML += '<div class="number number${card[i]}">card[i]</div>';
 }
 
 
